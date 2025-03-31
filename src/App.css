@@ -1,13 +1,13 @@
-#root {
-  max-width: 1280px;
+/* #root {
+  max-width: 880px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
 }
 
 .logo {
   height: 6em;
-  padding: 1.5em;
+  padding: 15em;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -31,12 +31,115 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
+} */
 
 .card {
   padding: 2em;
+  border-radius: 10px;
 }
 
 .read-the-docs {
   color: #888;
 }
+
+body {
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 600px;
+}
+
+
+.todo-item {
+  transition: all 0.3s ease-in-out;
+}
+
+.todo-item:hover {
+  background-color: #eceff1;
+}
+
+.edit-input {
+  width: 50%;
+  margin-right: 10px;
+}
+.btn-sm {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-warning svg, .btn-danger svg {
+  font-size: 16px;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+span:hover {
+  font-weight: bold;
+}
+.popup-message {
+  text-align: center;
+  margin-top: 20px; /* Moves it below the todo list box */
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ✅ Ensure To-Do items have proper spacing */
+.list-group-item {
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ✅ Popup Notification */
+.popup-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.popup-message.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.completed {
+  background-color: #f0f8ff; /* Light background color for completed tasks */
+  color: gray; /* Optional: dim the color of the text for completed tasks */
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
